@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muallif</title>
+</head>
+<body>
+         <h1>Hamma mualliflar:</h1>
+         <br>
+         <hr>
+         <br>
+         {% for muallif in muallif%}
+         <h1>Muallif ismi:{{muallif.ism}}</h1>
+         <br>
+         <a href="/hama_ochirish/{{muallif.id}}/"><button>delete</button></a>
+         <br>
+         {% endfor %}
+</body>
+</html>

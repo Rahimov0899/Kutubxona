@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Kitoblar</title>
+  </head>
+  <body>
+    <h1>Kitoblar ro'yxati</h1>
+    <br>
+    <hr>
+    <br>
+    <form method="get">
+      <input type="text" name="qidiruv">
+      <button>Qidirish</button>
+    </form>
+    <br>
+    <br>
+    <ul>
+      {% for kitob in kitoblar%}
+      <h1>{{kitob.id}}.{{kitob.nom}}</h1>
+      <p>Kurs:{{kitob.muallif}}</p>
+      <br>
+      <a href="/kitob_ochir/{{kitob.id}}/"><button>delete</button></a>
+      <br>
+      {% endfor%}
+   </ul>
+  </body>
+</html>

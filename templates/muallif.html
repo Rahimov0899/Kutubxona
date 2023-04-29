@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Muallif</title>
+  </head>
+  <body>
+    <h1>Xamma Mualliflar</h1>
+     <br>
+    <hr>
+    <br>
+    <form method="get">
+      <input type="text" name="qidiruv">
+      <button>Qidirish</button>
+    </form>
+    <br>
+    <br>
+    <ul>
+      {% for talaba in muallif%}
+      <h1>{{talaba.id}}.{{talaba.ism}}</h1>
+      <br>
+
+  {% endfor%}
+   </ul>
+  </body>
+</html>
