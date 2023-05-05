@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Muallif</title>
+    <title>Admin</title>
   </head>
   <body>
-    <h1>Xamma Mualliflar</h1>
+    <h1>Xamma Adminlar</h1>
      <br>
     <hr>
     <br>
@@ -16,8 +16,8 @@
     <br>
     <br>
     <ul>
-      {% for i in muallif%}
-      <h1>{{i.id}}.{{i.ism}}</h1>
+      {% for k in adminlar%}
+      <h1>{{k.id}}.{{k.ism}}</h1>
       <br>
       <a href="/bitta_ochir/{{i.id}}/"><button>delete</button></a>
 
@@ -25,11 +25,12 @@
          <br>
          <br>
              <form method="post">{% csrf_token %}
-        <input type="text" name="i" placeholder="Ism">
-        <input type="number" name="k" placeholder="Kitob_soni">
-        <input type="text" name="j" placeholder="jins">
-        <input type="text" name="t" placeholder="trik">
-        <input type="date" name="t_y" placeholder="tugulgan yili">
+         <input type="text" name="ism" placeholder="Ism">
+        <input type="text" name="fam" placeholder="Familya">
+<!--        <input type="date" name="i_v" placeholder="Ish_vaqt">-->
+        <select name="vaqt">
+            <option value="01-02-2023">01-02-2023</option>
+        </select>
         <button type="submit">Qo'shish</button>
     </form>
     <br>
